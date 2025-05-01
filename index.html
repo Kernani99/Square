@@ -542,6 +542,83 @@
             font-size: 1.5rem;
             margin-left: 8px;
         }
+
+        /* أنماط قسم الشركاء */
+        .partners-section {
+            background-color: var(--white-color);
+            padding: 40px 0;
+            margin-top: 50px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .partners-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .partners-track {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            animation: scrollPartners 30s linear infinite;
+            width: max-content;
+        }
+        
+        .partner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            min-width: 200px;
+            padding: 15px;
+            background: var(--light-color);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .partner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .partner img {
+            height: 60px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+        
+        .partner:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .partner p {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin: 0;
+        }
+        
+        @keyframes scrollPartners {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        @media (max-width: 768px) {
+            .partner {
+                min-width: 150px;
+            }
+            
+            .partner img {
+                height: 50px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -806,6 +883,44 @@
     <h3>بريد الجزائر</h3>
     <p>تحويل مالي عبر مكاتب بريد الجزائر</p>
 </div>
+            </div>
+        </div>
+
+        <!-- قسم شركاؤنا -->
+        <div class="partners-section">
+            <h2 class="section-title"><i class="fas fa-handshake"></i> شركاؤنا الذين وضعوا ثقتهم بنا</h2>
+            <div class="partners-container">
+                <div class="partners-track">
+                    <!-- الشركاء - يمكنك استبدال الروابط بصور الشعارات الفعلية -->
+                    <div class="partner">
+                        <img src="https://www.maxi-industries.com/images/logo.png" alt="ماكسي انديستري">
+                        <p>ماكسي انديستري</p>
+                    </div>
+                    <div class="partner">
+                        <img src="https://www.hbscooters.com/uploads/5/1/6/3/5163697/symlogo_orig.png" alt="سيم بليدة">
+                        <p>سيم بليدة</p>
+                    </div>
+                    <div class="partner">
+                        <img src="https://i.imgur.com/PfnNvfr.png" alt="حاتم موبيل">
+                        <p>حاتم موبيل</p>
+                    </div>
+                    <div class="partner">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRySGs8u06MyzDnUX541XY0wQYp-iqM64kx3Q&s" alt="معهد ميلينا">
+                        <p>معهد ميلينا</p>
+                    </div>
+                    <div class="partner">
+                        <img src="https://mediaresource.sfo2.digitaloceanspaces.com/wp-content/uploads/2024/09/23170542/Ooredoo-Logo.png" alt="التوأم سايح">
+                        <p>التوأم سايح</p>
+                    </div>
+                    <div class="partner">
+                        <img src="https://i.imgur.com/fOsCyFV.png" alt="سيم الجزائر">
+                        <p>سيم الجزائر</p>
+                    </div>
+                    <div class="partner">
+                        <img src="https://www.hbscooters.com/uploads/5/1/6/3/5163697/symlogo_orig.png" alt="سيم بومرداس">
+                        <p>سيم بومرداس</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
